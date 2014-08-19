@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+		<div id="page-navigation">
+		        <div style="float:left">
+		        {% if page.previous.url %}
+		                <a href="{{ site.url }}{{page.previous.url}}" 
+		                	title="Previous Post:{{page.previous.title}}">☜
+		                 {{page.previous.title}}
+		                </a>
+		        {% endif %}
+		        </div>
+
+		        <div style="float:right">
+		        {% if page.next.url %}
+		                <a href="{{ site.url }}{{page.next.url}}" 
+		                	title="next Post:{{page.next.title}}">
+		                {{page.next.title}} ☞ 
+		                </a>
+		        {% endif %}
+		        </div>
+		        <div style="clear:both"></div>
+		</div> 
+
+			<div class="post">
+			<center><h2>{{ page.title }}</h2></center>
+				{{ content }}
+			</div>
+
+			  {% for cat in page.categories %}
+			   {% assign catFlag = true %}
+			    {% endfor %}
+			  {% if catFlag %}
+			<div class="meta">
+			  	<span class="categories">in categories
+			  {% for cat in page.categories %}
+			 	 <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
+			  {% endfor %}
+				</span>
+			</div>
+			  {% endif %}
+
+		<div id="page-navigation">
+		        <div class="clear">&nbsp;</div>
+		        <div style="float:left">
+		        {% if page.previous.url %}
+		                <a href="{{ site.url }}{{page.previous.url}}" 
+		                	title="Previous Post:{{page.previous.title}}">☜
+		                 {{page.previous.title}}
+		                </a>
+		        {% endif %}
+		        </div>
+
+		        <div style="float:right">
+		        {% if page.next.url %}
+		                <a href="{{ site.url }}{{page.next.url}}" 
+		                	title="next Post:{{page.next.title}}">
+		                {{page.next.title}} ☞
+		                </a>
+		        {% endif %}
+		        </div>
+		        <div style="clear:both"></div>
+		</div> 
+
+		<div id="clear" style="clear:both"><br/></div>
+
+				<!-- Duoshuo-->
+				<div class="ds-thread"></div>
+				<!-- Disqus-->
+				<div class="comment">
+				    <div id="disqus_thread"></div>
+				</div>

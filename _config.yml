@@ -1,0 +1,5 @@
+markdown: rdiscount
+permalink: /:year/:i_month/:i_day/:title/
+author: ddatsh
+url: /blog
+paginate: 20
